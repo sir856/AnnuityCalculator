@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("AnnuitetCalculator")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("AnnuityCalculator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("AnnuitetCalculator")]
-[assembly: System.Reflection.AssemblyTitleAttribute("AnnuitetCalculator")]
+[assembly: System.Reflection.AssemblyProductAttribute("AnnuityCalculator")]
+[assembly: System.Reflection.AssemblyTitleAttribute("AnnuityCalculator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Создано классом WriteCodeFragment MSBuild.
