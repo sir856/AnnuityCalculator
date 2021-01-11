@@ -1,0 +1,36 @@
+﻿@model Loan
+<form method="post" action="/Home/Calculate">
+    <div class="form-group">
+        <label for="Sum">Сумма займа</label>
+        <div class="input-group">
+            @Html.TextBoxFor(m => m.Sum, new { @class = "form-control", @type = "number", @placeholder = "Сумма", @name = "Sum" })
+            <div class="input-group-append">
+                <div class="input-group-text">руб</div>
+            </div>
+        </div>
+        @Html.ValidationMessageFor(m => m.Sum, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        <label for="Time">Срок займа (в днях)</label>
+        @Html.TextBoxFor(m => m.Time, new { @class = "form-control", @type = "number", @placeholder = "Срок", @name = "Time" })
+        @Html.ValidationMessageFor(m => m.Time, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        <label for="Rate">Ставка (в день)</label>
+        <div class="input-group">
+            @Html.TextBoxFor(m => m.Rate, new { @class = "form-control", @type = "number", @placeholder = "Ставка", @name = "Rate" })
+            <div class="input-group-append">
+                <span class="input-group-text">%</span>
+            </div>
+        </div>
+        @Html.ValidationMessageFor(m => m.Rate, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        <label for="Rate">Шаг платежа (в днях)</label>
+        <div class="input-group">
+            @Html.TextBoxFor(m => m.Step, new { @class = "form-control", @type = "number", @placeholder = "Шаг", @name = "Step" })
+        </div>
+        @Html.ValidationMessageFor(m => m.Step, "", new { @class = "text-danger" })
+    </div>
+    <button type="submit" class="btn btn-primary">Рассчитать</button>
+</form>

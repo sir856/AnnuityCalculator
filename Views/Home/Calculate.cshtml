@@ -1,0 +1,33 @@
+﻿<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">№</th>
+            <th scope="col">Дата</th>
+            <th scope="col">Сумма</th>
+            <th scope="col">Долг</th>
+            <th scope="col">Проценты</th>
+            <th scope="col">Остаток</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var pay in ViewBag.pays)
+        {
+            <tr>
+                <th scope="row">@pay.Id</th>
+                <td>@pay.Date.ToShortDateString()</td>
+                <td>@pay.Sum</td>
+                <td>@pay.Debt</td>
+                <td>@pay.Percent</td>
+                <td>@pay.Balance</td>
+            </tr>
+        }
+
+        <tr>
+            <th scope="row" colspan="5">Переплата</th>
+            <td>@ViewBag.overpay</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
